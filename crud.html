@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> CRUD - Products </title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="datatable.css"/>
+    <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" type="text/css" href="styling.css">
+</head>
+<body>
+<a href="admin.php" class = "btn btn1 btn-md btn-dark hvr-overline-from-center back" > Go back </a>
+<input id="addNew" type="button" class="btn btn-success" value="add new"> <br> <br>
+<div class="container">
+    <div id="tableManager" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title"> Insert a product </h2>
+                </div>
+                <div class="modal-body">
+                    <div id="editContent">
+                        <select name = "prodCat" id = "prodCat" class="form-control">
+                            <option value="1">Phone</option>
+                            <option value="2">Tablet</option>
+                            <option value="3">Accessory</option>
+                        </select>
+                        <br>
+                        <input type="text" class = "form-control" placeholder="Product Company" id="prodComp">
+                        <br>
+                        <input type="text" class = "form-control" placeholder="Product Name" id="prodName">
+                        <br>
+                        <textarea class = "form-control" placeholder="Product Specs" id="prodSpecs"></textarea>
+                        <br>
+                        <input type="number" class = "form-control" placeholder="Product Price" id="prodPrice">
+                        <br>
+                        <input type="number" class = "form-control" placeholder="Product Quantity" id="prodQuantity">
+                        <br>
+                        <input type="number" class = "form-control" placeholder="Product Sale Price" id="prodSalePrice">
+                        <input type="hidden" id="editProdID" value="0">
+                    </div>
+                    <div id="viewContent">
+                        <h3> Product ID </h3>
+                        <div id="prodIDView"> </div>
+                        <hr>
+                        <h3> Category ID </h3>
+                        <div id="catIDView"> </div>
+                        <hr>
+                        <h3> Company </h3>
+                        <div id="prodCompView"> </div>
+                        <hr>
+                        <h3> Name </h3>
+                        <div id="prodNameView"> </div>
+                        <hr>
+                        <h3> Specification </h3>
+                        <div id="prodSpecsView"> </div>
+                        <hr>
+                        <h3> Price </h3>
+                        <div id="prodPriceView"> </div>
+                        <hr>
+                        <h3> Quantity </h3>
+                        <div id="prodQuantityView"> </div>
+                        <hr>
+                        <h3> Sale Price </h3>
+                        <div id="prodSalePriceView"> </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <input type="button" id="prodBtn" onclick="manageData('addNew')" value="Save" class="btn btn-success">
+                    <input type="button" id="closeBtn" data-dismiss = "modal" value="Close" class="btn btn-primary">
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <h2> Admin tools - Products CRUD </h2>
+            <table class="table table-hover table-bordered">
+                <thead>
+                <tr>
+                    <th width="10%">productID</th>
+                    <th width="10%">categoryID</th>
+                    <th width="10%">productCompany</th>
+                    <th width="10%">productName</th>
+                    <th width="30%">productSpecs</th>
+                    <th width="10%">productPrice</th>
+                    <th width="10%">productQuantity</th>
+                    <th width="10%">productSalePrice</th>
+                    <th width="10%">Tools</th>
+                </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"> </script>
+<script type="text/javascript" src="datatable.js"> </script>
+<script type="text/javascript" src="DataTables/js/jquery.dataTables.min.js"> </script>
+<script type="text/javascript" src="DataTables/js/dataTables.bootstrap.min.js"> </script>
+</body>
+</html>

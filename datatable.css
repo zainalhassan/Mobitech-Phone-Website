@@ -1,0 +1,12 @@
+.container
+{
+    margin: 0;
+}
+.back
+{
+    margin: 20px;
+}
+#viewContent
+{
+    display: none;
+}

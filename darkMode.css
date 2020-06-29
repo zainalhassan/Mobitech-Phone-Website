@@ -1,0 +1,14 @@
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #303030;
+        color: lightgrey;
+    }
+    #navBar
+    {
+        background-color: #303030 !important;
+    }
+    .card
+    {
+        background-color: #7a7a7a;
+    }
+}

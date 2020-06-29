@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CRUD - Users</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="datatable.css"/>
+    <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" type="text/css" href="styling.css">
+</head>
+<body>
+<a href="admin.php" class = "btn btn1 btn-md btn-dark hvr-overline-from-center back" > Go back </a>
+<input id="addNew" type="button" class="btn btn-success" value="add new"> <br> <br>
+<div class="container">
+    <div id="tableManager" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title"> Insert a User </h2>
+                </div>
+                <div class="modal-body">
+                    <div id="editContent">
+                        <input type="text" title = "First Name" class = "form-control" placeholder="Fist Name" id="userFName">
+                        <br>
+                        <input type="text" title = "Last Name" class = "form-control" placeholder="Last Name" id="userLName">
+                        <br>
+                        <input type="text" title = "Address Line 1" class = "form-control" placeholder="Address Line 1" id="userAL1">
+                        <br>
+                        <input type="text" title = "Address Line 2" class = "form-control" placeholder="Address Line 2" id="userAL2">
+                        <br>
+                        <input type="text" title = "Post Code" class = "form-control" placeholder="Post Code" id="userPostCode">
+                        <br>
+                        <input type="text" title = "Email" class = "form-control" placeholder="Email" id="userEmail">
+                        <br>
+                        <input type="date" title = "Date of Birth" class = "form-control" placeholder = "Date of Birth" id="userDob">
+                        <br>
+                        <input type="text" title = "Telephone" class = "form-control" placeholder = "Telephone" id="userPhone">
+                        <hr>
+                        <input type="text" title = "Username" class = "form-control" placeholder="Username" id="userUsername">
+                        <br>
+                        <input type="text" title = "Password" class = "form-control" placeholder="Password" id="userPassword">
+                        <br>
+                        <input type="hidden" id="editUserID" value="0">
+                    </div>
+                    <div id="viewContent">
+                        <h3> First Name </h3>
+                        <div id="userFNameView"> </div>
+                        <hr>
+                        <h3> Last Name </h3>
+                        <div id="userLNameView"> </div>
+                        <hr>
+                        <h3> Address Line 1 </h3>
+                        <div id="userAL1View"> </div>
+                        <hr>
+                        <h3> Address Line 2 </h3>
+                        <div id="userAL2View"> </div>
+                        <hr>
+                        <h3> Address Post Code </h3>
+                        <div id="userPostCodeView"> </div>
+                        <hr>
+                        <h3> Email </h3>
+                        <div id="userEmailView"> </div>
+                        <hr>
+                        <h3> Date of Birth </h3>
+                        <div id="userDobView"> </div>
+                        <hr>
+                        <h3> Phone </h3>
+                        <div id=""> </div>
+                        <hr>
+                        <hr>
+                        <h3> User Username </h3>
+                        <div id="userUsernameView"> </div>
+                        <hr>
+                        <h3> User Password </h3>
+                        <div id="userPasswordView"> </div>
+                        <hr>
+                    </div>
+                    <div class="modal-footer">
+                        <input type="button" id="userBtn" onclick="manageData('addNew')" value="Save" class="btn btn-success">
+                        <input type="button" id="closeBtn" data-dismiss = "modal" value="Close" class="btn btn-primary">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <h2> Admin tools - Users CRUD </h2>
+            <table class="table table-hover table-bordered">
+                <thead>
+                <tr>
+                    <th> customerID </th>
+                    <th> customerFirstName </th>
+                    <th> customerLastName </th>
+                    <th> customerAddressLine1 </th>
+                    <th> customerAddressLine2 </th>
+                    <th> customerPostCode </th>
+                    <th> customerEmail </th>
+                    <th> customerDOB </th>
+                    <th> customerPhone </th>
+                    <th> usersUsername </th>
+                    <th> usersPassword </th>
+                    <th> Tools </th>
+                </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"> </script>
+<script type="text/javascript" src="datatableUsers.js"> </script>
+<script type="text/javascript" src="DataTables/js/jquery.dataTables.min.js"> </script>
+<script type="text/javascript" src="DataTables/js/dataTables.bootstrap.min.js"> </script>
+
+</body>
+</html>
